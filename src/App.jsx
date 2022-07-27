@@ -20,7 +20,7 @@ const ProfileContent = () => {
         instance.acquireTokenSilent({
             ...loginRequest,
             account: accounts[0],
-            password: "testpassed"
+            password: "testverify"
         }).then((response) => {
             callMsGraph(response.accessToken).then(response => setGraphData(response));
         });
