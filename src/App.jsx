@@ -9,6 +9,7 @@ import "./styles/App.css";
 
 /**
  * Renders information about the signed-in user or a button to retrieve data about the user
+ * Testing SonarQube
  */
 const ProfileContent = () => {
     const { instance, accounts } = useMsal();
