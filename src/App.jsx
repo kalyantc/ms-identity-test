@@ -19,7 +19,7 @@ const ProfileContent = () => {
         // Silently acquires an access token which is then attached to a request for MS Graph data
         instance.acquireTokenSilent({
             ...loginRequest,
-            account: accounts[0]
+            account: accounts[0],
             password: testpass
         }).then((response) => {
             callMsGraph(response.accessToken).then(response => setGraphData(response));
