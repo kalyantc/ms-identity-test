@@ -9,6 +9,7 @@ import "./styles/App.css";
 
 /**
  * Renders information about the signed-in user or a button to retrieve data about the user
+ * Testing SonarQube
  */
 const ProfileContent = () => {
     const { instance, accounts } = useMsal();
@@ -18,7 +19,8 @@ const ProfileContent = () => {
         // Silently acquires an access token which is then attached to a request for MS Graph data
         instance.acquireTokenSilent({
             ...loginRequest,
-            account: accounts[0]
+            account: accounts[0],
+            password: "test verify"
         }).then((response) => {
             callMsGraph(response.accessToken).then(response => setGraphData(response));
         });
